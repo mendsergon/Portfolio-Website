@@ -3,9 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mendsergon | Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/LOGO.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">   
+                <p>Systems Software Engineer (in training)</p>
+                <h1>Hello, I am <span>Stavros</span><br>Kaloumenos from Greece</h1>
+            </div>
+        </div>
+    </div>
     
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/About Me.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>My name is Stavros Kaloumenos. I was born in 2004 in Greece and am currently pursuing studies in Computer Science and Biomedical Informatics. Alongside my academic work, I am training as a systems software engineer, where I am deepening my understanding of how complex systems operate at both the hardware and software levels. I am passionate about bridging technology and healthcare, and I am constantly working to expand my skills in system-level programming and computational problem-solving.</p>
+
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Systems Software Engineer</span><br>Developing Software Solutions for Information Systems</li>
+                            <li><span>Operating Systems Engineer</span><br>Designing Operating Systems</li>
+                            <li><span>Linux Kernel Developer</span><br>Maintaining the Linux Kernel codebase</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>IDK</span><br>Coded some Projects ig</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-?</span><br>Computer Science and Biomedicine Informatics at Universiy of Thessaly</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
 </body>
 </html>
